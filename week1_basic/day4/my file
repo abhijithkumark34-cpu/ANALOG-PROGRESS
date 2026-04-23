@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+    struct student {
+        char name[10];
+        int age;
+        int height;
+        char place [10];
+
+    };
+    int main (){
+        FILE *f;
+        f=fopen("HI.txt","w");
+        if(f==NULL){
+            printf("file error");
+            return 1;
+        }
+
+        int n;
+        printf("Enter the number of students");
+        scanf("%d",&n);
+        struct student s[n];
+        for(int i=0;i<n;i++){
+            printf("Enter the name  of student number %d",i);
+            
+            
+            scanf("%s",s[i].name);
+            fprintf(f,"Enter the name  of student number %d is %s\n",i,s[i].name);
+            printf("enter the age ");
+            scanf("%d",&s[i].age );
+             fprintf(f,"enter the age %d \n",s[i].age);
+            printf("Ente rthe height of %d\n",i);
+            scanf("%d",&s[i].height );
+              fprintf(f,"Ente rthe height of %d is %d \n",i,s[i].height);
+            printf("enter the place of student ");
+            scanf("%s",s[i].place);
+            fprintf(f,"enter the place of student %s \n",s[i].place);
+
+        }
+         fclose(f);
+           f=fopen("HI.txt","r");
+           char c;
+           while ((c=fgetc(f))!=EOF){
+            printf("%c",c);
+
+           }
+           fclose(f);
+
+
+        return 0;
+
+
+
+
+}
