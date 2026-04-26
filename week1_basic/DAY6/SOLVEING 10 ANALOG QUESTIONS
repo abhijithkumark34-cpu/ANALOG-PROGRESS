@@ -1,0 +1,11 @@
+today i read 5 concepts which are as follow 
+  		• KCL & Nodal Analysis: Apply current conservation to find node voltages efficiently.
+		• Thevenin Equivalent: Reduce network to voltage source with series resistance.
+		• Equivalent Resistance: Find resistance seen from node by deactivating independent sources.
+		• Dependent Source Analysis: Analyze circuits containing controlled sources (crucial for transistor models).
+		• Superposition Principle: Analyze effect of each source separately, then sum responses.
+Voltage/Current Divider: Estimate node values quickly using resistance ratios without equations.
+
+  By using this concepts i decoded 10 problems ranging from basic to advance 
+  each is simulated on ltspice with solutions  a pic is shared in the same repo
+  #Never give up
