@@ -1,0 +1,36 @@
+# Day XX - Network Theory: Introduction to 2-Port Networks
+
+## Topics Learned
+
+* What a 2-port network is
+* Input port and output port concepts
+* Why 2-port parameters are used
+* Z-parameters (Impedance Parameters)
+* Y-parameters (Admittance Parameters)
+* Physical meaning of transfer parameters
+
+## Key Insights
+
+* A complex circuit can be treated as a black box with two ports.
+* Instead of analyzing the entire circuit repeatedly, we characterize its behavior using parameters.
+* Z-parameters relate voltages to currents:
+
+  * V1 = Z11I1 + Z12I2
+  * V2 = Z21I1 + Z22I2
+* Y-parameters relate currents to voltages:
+
+  * I1 = Y11V1 + Y12V2
+  * I2 = Y21V1 + Y22V2
+* Transfer parameters describe how the input affects the output.
+
+## Questions I Explored
+
+* Why do we need 2-port networks?
+* What is the physical meaning of admittance?
+* How are Z and Y parameters measured?
+
+## Next Steps
+
+* Learn Z-parameter derivation
+* Learn Y-parameter derivation
+* Solve numerical problems on 2-port networks
