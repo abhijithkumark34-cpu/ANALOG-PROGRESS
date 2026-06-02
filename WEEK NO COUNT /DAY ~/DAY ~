@@ -1,0 +1,333 @@
+# Two-Port Network Parameters: Z, Y, H, G, and ABCD
+
+## Overview
+
+A two-port network is a circuit block with two terminals at the input and two terminals at the output. Instead of analyzing the internal components every time, we can describe the network using parameter sets that relate voltages and currents at the two ports.
+
+The five most common parameter representations are:
+
+* Z Parameters (Impedance)
+* Y Parameters (Admittance)
+* H Parameters (Hybrid)
+* G Parameters (Inverse Hybrid)
+* ABCD Parameters (Transmission)
+
+---
+
+# 1. Z Parameters (Impedance Parameters)
+
+Relates port voltages to port currents.
+
+[
+V_1 = Z_{11}I_1 + Z_{12}I_2
+]
+
+[
+V_2 = Z_{21}I_1 + Z_{22}I_2
+]
+
+Matrix form:
+
+[
+\begin{bmatrix}
+V_1\
+V_2
+\end{bmatrix}
+=============
+
+\begin{bmatrix}
+Z_{11} & Z_{12}\
+Z_{21} & Z_{22}
+\end{bmatrix}
+\begin{bmatrix}
+I_1\
+I_2
+\end{bmatrix}
+]
+
+### Parameter Definitions
+
+[
+Z_{11}=\frac{V_1}{I_1}\Big|_{I_2=0}
+]
+
+[
+Z_{12}=\frac{V_1}{I_2}\Big|_{I_1=0}
+]
+
+[
+Z_{21}=\frac{V_2}{I_1}\Big|_{I_2=0}
+]
+
+[
+Z_{22}=\frac{V_2}{I_2}\Big|_{I_1=0}
+]
+
+**Condition:** Open circuit at the opposite port.
+
+---
+
+# 2. Y Parameters (Admittance Parameters)
+
+Relates port currents to port voltages.
+
+[
+I_1 = Y_{11}V_1 + Y_{12}V_2
+]
+
+[
+I_2 = Y_{21}V_1 + Y_{22}V_2
+]
+
+Matrix form:
+
+[
+\begin{bmatrix}
+I_1\
+I_2
+\end{bmatrix}
+=============
+
+\begin{bmatrix}
+Y_{11} & Y_{12}\
+Y_{21} & Y_{22}
+\end{bmatrix}
+\begin{bmatrix}
+V_1\
+V_2
+\end{bmatrix}
+]
+
+### Parameter Definitions
+
+[
+Y_{11}=\frac{I_1}{V_1}\Big|_{V_2=0}
+]
+
+[
+Y_{12}=\frac{I_1}{V_2}\Big|_{V_1=0}
+]
+
+[
+Y_{21}=\frac{I_2}{V_1}\Big|_{V_2=0}
+]
+
+[
+Y_{22}=\frac{I_2}{V_2}\Big|_{V_1=0}
+]
+
+**Condition:** Short circuit at the opposite port.
+
+---
+
+# 3. H Parameters (Hybrid Parameters)
+
+Mixes current and voltage variables.
+
+[
+V_1 = h_{11}I_1 + h_{12}V_2
+]
+
+[
+I_2 = h_{21}I_1 + h_{22}V_2
+]
+
+Matrix form:
+
+[
+\begin{bmatrix}
+V_1\
+I_2
+\end{bmatrix}
+=============
+
+\begin{bmatrix}
+h_{11} & h_{12}\
+h_{21} & h_{22}
+\end{bmatrix}
+\begin{bmatrix}
+I_1\
+V_2
+\end{bmatrix}
+]
+
+---
+
+# 4. G Parameters (Inverse Hybrid Parameters)
+
+Inverse form of H-parameters.
+
+[
+I_1 = g_{11}V_1 + g_{12}I_2
+]
+
+[
+V_2 = g_{21}V_1 + g_{22}I_2
+]
+
+Matrix form:
+
+[
+\begin{bmatrix}
+I_1\
+V_2
+\end{bmatrix}
+=============
+
+\begin{bmatrix}
+g_{11} & g_{12}\
+g_{21} & g_{22}
+\end{bmatrix}
+\begin{bmatrix}
+V_1\
+I_2
+\end{bmatrix}
+]
+
+---
+
+# 5. ABCD Parameters (Transmission Parameters)
+
+Widely used for cascaded networks and communication systems.
+
+[
+V_1 = AV_2 - BI_2
+]
+
+[
+I_1 = CV_2 - DI_2
+]
+
+Matrix form:
+
+[
+\begin{bmatrix}
+V_1\
+I_1
+\end{bmatrix}
+=============
+
+\begin{bmatrix}
+A & B\
+C & D
+\end{bmatrix}
+\begin{bmatrix}
+V_2\
+-I_2
+\end{bmatrix}
+]
+
+---
+
+# Relationship Between Z and Y Parameters
+
+The Y-parameter matrix is the inverse of the Z-parameter matrix.
+
+[
+[Y]=[Z]^{-1}
+]
+
+Similarly,
+
+[
+[Z]=[Y]^{-1}
+]
+
+If
+
+[
+[Z]
+===
+
+\begin{bmatrix}
+Z_{11} & Z_{12}\
+Z_{21} & Z_{22}
+\end{bmatrix}
+]
+
+then
+
+[
+\Delta_Z=Z_{11}Z_{22}-Z_{12}Z_{21}
+]
+
+and
+
+[
+[Y]
+===
+
+\frac{1}{\Delta_Z}
+\begin{bmatrix}
+Z_{22} & -Z_{12}\
+-Z_{21} & Z_{11}
+\end{bmatrix}
+]
+
+Therefore,
+
+[
+Y_{11}=\frac{Z_{22}}{\Delta_Z}
+]
+
+[
+Y_{12}=\frac{-Z_{12}}{\Delta_Z}
+]
+
+[
+Y_{21}=\frac{-Z_{21}}{\Delta_Z}
+]
+
+[
+Y_{22}=\frac{Z_{11}}{\Delta_Z}
+]
+
+Similarly,
+
+[
+\Delta_Y=Y_{11}Y_{22}-Y_{12}Y_{21}
+]
+
+[
+[Z]
+===
+
+\frac{1}{\Delta_Y}
+\begin{bmatrix}
+Y_{22} & -Y_{12}\
+-Y_{21} & Y_{11}
+\end{bmatrix}
+]
+
+---
+
+# Quick Comparison
+
+| Parameters | Inputs  | Outputs |
+| ---------- | ------- | ------- |
+| Z          | I₁, I₂  | V₁, V₂  |
+| Y          | V₁, V₂  | I₁, I₂  |
+| H          | I₁, V₂  | V₁, I₂  |
+| G          | V₁, I₂  | I₁, V₂  |
+| ABCD       | V₂, -I₂ | V₁, I₁  |
+
+---
+
+# Key Takeaway
+
+Each parameter set describes the same two-port network from a different perspective.
+
+* Z Parameters → Voltage response due to currents.
+* Y Parameters → Current response due to voltages.
+* H Parameters → Commonly used in transistor modeling.
+* G Parameters → Inverse form of H parameters.
+* ABCD Parameters → Best for cascaded networks.
+
+The most important relationship to remember is:
+
+[
+[Y]=[Z]^{-1}
+]
+
+Once this is understood, conversion between impedance and admittance representations becomes straightforward.
+
