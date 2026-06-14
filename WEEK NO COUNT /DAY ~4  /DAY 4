@@ -1,0 +1,13 @@
+So, today I watched 2 lectures from MIT 6.002 and 1 lecture from Razavi's Electronics 1.
+
+The first lecture was about the basics of device-level physics, where I learned the components in a signal transmission line. First, there is a microphone, then an amplifier to boost the low-voltage signal to a few volts. Then the signal travels through a modulator in order to increase the frequency, since the produced signal is not only low in voltage but also low in frequency. Here, we combine it with a carrier frequency. After that, it passes through a power amplifier and then to a transmission tower or antenna.
+
+After this, I learned a few concepts in semiconductors. Silicon gives almost zero conductivity at 0 Kelvin because there are no free charge carriers available for conduction. I asked why PCs perform differently if the temperature keeps fluctuating. The answer was that computers have cooling systems and thermal management mechanisms to keep the temperature within certain limits, ensuring reliable operation.
+
+In a pure semiconductor, the number of holes equals the number of electrons. The total carrier concentration is on the order of (10^{10}) per cubic centimeter at room temperature, which is relatively small. Because of this, pure silicon is not very conductive. To increase conductivity, we dope the silicon with elements that have either more or fewer valence electrons than silicon, which has 4 valence electrons.
+
+If the dopant has more valence electrons, it forms a donor impurity and contributes extra electrons, creating an N-type semiconductor. If it has fewer valence electrons, it creates acceptor impurities and produces a P-type semiconductor.
+
+One question I had was: if the number of electrons increases, then the number of holes should decrease, right? Wouldn't that cancel the effect? But this does not happen because electrons and holes do not increase and decrease equally. Doping makes one type of charge carrier dominant, called the majority carrier, which greatly increases conductivity. This is one of the key ideas that makes modern semiconductor devices possible.
+
+Overall, the biggest takeaway from today was understanding how signal transmission systems work at a high level and how doping allows us to control the conductivity of semiconductors by changing the concentration of charge carriers.
