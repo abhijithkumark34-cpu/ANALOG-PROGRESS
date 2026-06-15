@@ -1,0 +1,28 @@
+So today I worked on some basic topics related to analog circuits by following Razavi’s lectures. Today, I completed around two lectures, which were basically on the fundamentals of device physics. In these lectures, I learned the core intuition behind a PN junction diode and how a PN junction actually works. Earlier, I was not familiar with the exact way a PN junction operates, but he explained the actual intuition, such as how electrons move from the N region to the P region and how holes effectively move in the opposite direction.
+
+Some of the concepts that I truly appreciate are that the number of electrons and holes is exactly equal in a pure semiconductor, and by doping we either increase the number of holes or the number of electrons. Why do we dope a semiconductor? When we dope it, we increase the conductivity of that particular semiconductor. For example, when we dope with pentavalent impurities such as phosphorus, phosphorus has an extra electron that has no bond to participate in and can move freely. This increases the conductivity and contributes to current conduction.
+
+If we increase the number of electrons, the number of holes gets reduced. This is obvious because if the number of electrons is much higher than the number of holes, then whenever a hole forms, an electron can quickly occupy that hole and reduce the hole concentration.
+
+Another fact that I learned is related to metals such as aluminum and copper. Aluminum has three valence electrons in its outermost shell. Logically, if the number of valence electrons is greater, we might think that the material should contribute more to conduction. Since aluminum has three valence electrons and copper has only one, it would seem that aluminum should conduct better than copper. However, this does not occur in real life. In reality, copper is always more conductive than aluminum.
+
+The reason I researched and found is that conductivity is not determined only by the number of valence electrons. In aluminum, electrons experience more scattering, and their path is not as smooth. In copper, electrons can move more easily through the crystal lattice, and scattering is lower. Even though aluminum has a greater number of valence electrons, copper is preferred because electrons can travel more efficiently through it, resulting in higher conductivity.
+
+After learning many such concepts, I moved on to solving problems related to network theory. I solved many problems, around 10 to 20, but while solving them I found one problem that was not very obvious. It was different from the problems I had solved before.
+
+The circuit had a voltage source connected between two nodes. Normally, this is simple to solve because we know that whenever a voltage source is connected between two nodes, it forms a supernode. To solve such a circuit, we apply nodal analysis and find the node voltages, say (V_a) and (V_b). Then we form two equations.
+
+First, we treat the two nodes as a single supernode and apply KCL. We do not write separate node equations for the two nodes connected by the voltage source. After writing the KCL equation, we usually get one equation with two unknowns. The second equation comes from the voltage source itself, since it defines the voltage relationship between the two principal nodes. By simplifying these two equations, we can find the node voltages (V_a) and (V_b). After finding them, we can easily calculate the current flowing through the resistor specified in the question.
+
+This is the simple method for solving supernode problems. However, the strange part in this question was that it did not contain a normal voltage source. Instead, it had a dependent voltage source. This confused me a little. I was wondering whether I should use normal nodal analysis, supernode analysis, or some completely different approach.
+
+Later, I found out that the problem can still be solved using the supernode concept itself. We simply substitute the expression of the dependent source into the supernode equation and proceed exactly as we do in ordinary nodal analysis.
+
+However, before realizing that, I tried my own approach. I observed that the 5 mA current source on the left side must satisfy KCL. Since the circuit also had a 2 mA current source directed downward, I considered the unknown currents (I_x) and (I_0). For (I_0), I applied Ohm’s law. Since (I_0) flows through a 1 kΩ resistor, I expressed it in terms of the voltage across that resistor. After finding the expression for (I_0), I substituted it into the dependent-source equation. Then I used KCL to find the value of (I_x). In the end, the problem could be solved 
+  quite easily, but the presence of the dependent voltage source initially made me think that a different method might be required. Later, I realized that the standard supernode approach still works perfectly as long as the dependent source relation is included correctly in the equations.
+
+
+
+
+
+    A PIC OF QUESTION IS SHARED IN THE SAME REPO
