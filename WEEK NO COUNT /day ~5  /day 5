@@ -22,7 +22,7 @@ However, before realizing that, I tried my own approach. I observed that the 5 m
   quite easily, but the presence of the dependent voltage source initially made me think that a different method might be required. Later, I realized that the standard supernode approach still works perfectly as long as the dependent source relation is included correctly in the equations.
 
 
-
-
+solve for i0          5=i0+2+V2/1000
+WERE V1=1000I0     SO V2=2000I0
 
     A PIC OF QUESTION IS SHARED IN THE SAME REPO
