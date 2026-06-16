@@ -1,0 +1,11 @@
+
+
+I learned that FM uses analog radio frequency, whereas cellular telecommunication networks use digital radio frequency. Basically, how does the data flow?
+
+The minimum amount of voltage that should be applied to break the barrier in the case of a p-n junction diode is called the barrier potential. This barrier potential varies from material to material. Silicon has a 0.8 eV barrier potential, and germanium has a 0.3 eV barrier potential.
+
+After this threshold voltage, only an exponential increase in current can be seen in the diode. After reaching the barrier potential, the current increases very rapidly for a very minor change in voltage. That is why, in order to find the voltage in a diode, we use a formula with an exponent, but when we are finding current, we use a logarithm.
+
+Because a logarithm tells us that if there are two components that are varying, one component is varying very largely with respect to the other.
+
+This p-n junction diode can also be used as a variable capacitor because the depletion layer acts as the insulating material between the two plates of a capacitor. The two plates are the n-region and p-region of the diode, and the insulating material is the depletion region. This type of capacitor is nowadays also used in Bluetooth devices, and it is called a varactor.
