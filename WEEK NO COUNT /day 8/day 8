@@ -1,0 +1,44 @@
+Today, I studied the voltage doubler circuit.
+
+Usually, we use devices like transformers to step up or step down voltage. It totally depends on the number of turns in the primary and secondary coils. However, we can also increase voltage by using diodes and capacitors. This is basically what we do in voltage doubler circuits. We use capacitors and diodes to double the voltage, and we can even make it triple or multiply it by any factor. The negative part is that the available output current decreases. If the voltage increases, the output current capability decreases. This is the trade-off between current and voltage according to the law of conservation of energy.
+
+During one half-cycle of the AC input, a capacitor charges up to approximately the source voltage. During the next half-cycle, the source voltage and the charged capacitor voltage are added together, resulting in a higher output voltage. By adding more capacitor-diode stages, we can obtain 4×, 5×, or even higher voltages.
+
+After this, the class moved on to BJTs.
+
+A BJT is a current-controlled current source. A small change in the base-emitter voltage causes a large change in collector current. For approximately every 60 mV increase in base-emitter voltage, the collector current increases by about 10 times.
+
+In a BJT, the emitter is heavily doped, the base is lightly doped, and the collector is moderately doped. A BJT is not simply two diodes connected back-to-back. In a diode, the two regions are designed differently from those in a BJT, so we cannot make a true BJT by simply connecting two diodes together.
+
+There are three major regions of BJT operation:
+
+1. Active Region:
+   The base-emitter junction is forward-biased, and the collector-base junction is reverse-biased. In this region, the transistor acts as an amplifier. For approximately every 60 mV increase in VBE, the collector current increases by about 10 times.
+
+2. Saturation Region:
+   Both the base-emitter and collector-base junctions are forward-biased. In this region, the transistor acts like a closed switch (ON state).
+
+3. Cut-off Region:
+   Both junctions are reverse-biased. In this region, the transistor acts like an open switch (OFF state).
+
+A BJT follows an equation similar to that of a diode:
+
+IC = IS(exp(VBE/VT) − 1)
+
+Also,
+
+VCE = VCB + VBE
+
+or equivalently,
+
+VCB = VCE − VBE
+
+Next, we studied the physical operation of a BJT.
+
+Considering an NPN transistor, when the base-emitter junction is forward-biased, electrons are injected from the heavily doped emitter into the lightly doped base. Since the base is very thin and lightly doped, only a small number of electrons recombine with holes in the base. Most of the electrons reach the collector-base depletion region. The electric field created by the reverse-biased collector-base junction sweeps these electrons into the collector.
+
+The holes required for recombination are supplied through the base terminal, creating the base current. Both electrons and holes contribute to current flow, but conventional current flows in the direction opposite to electron motion.
+
+After that, we constructed an amplifier using a BJT.
+
+The signal coming from devices such as microphones is usually very small, often only a few millivolts to a few tens of millivolts. Such a small signal alone may not properly bias the transistor. Therefore, we apply a DC bias voltage so that the microphone signal is superimposed on the bias voltage. This keeps the transistor operating in the active region, allowing it to amplify the input signal correctly.
