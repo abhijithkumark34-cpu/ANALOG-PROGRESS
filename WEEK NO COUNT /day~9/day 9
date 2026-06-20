@@ -1,0 +1,66 @@
+Today I studied the BJT as an amplifier and went deeper into its operation and application. One of the major applications of a BJT is amplification. In practice, input signals from devices such as microphones, radios, and sensors are usually very small, often only a few millivolts. To process these signals properly, we pass them through an amplifier.
+
+To build a useful amplifier, we use biasing. Biasing means applying a suitable DC voltage or current to establish an operating point, also called the Q-point, on the BJT’s characteristic curve. This Q-point is very important because it determines how linearly and efficiently the amplifier will work. The operating point should be chosen so that the transistor remains in the active region and can handle signal variations without distortion. It is not simply about keeping the operating point as high as possible; instead, it should be placed appropriately for the required signal swing and linearity.
+
+I also studied transconductance. Transconductance is defined as the change in collector current with respect to the change in base-emitter voltage:
+
+g
+m
+	​
+
+=
+dV
+BE
+	​
+
+dI
+C
+	​
+
+	​
+
+
+For a BJT, this is approximately:
+
+g
+m
+	​
+
+≈
+V
+T
+	​
+
+I
+C
+	​
+
+	​
+
+
+where V
+T
+	​
+
+ is the thermal voltage.
+
+There are two types of signal analysis:
+
+Small-signal analysis
+Large-signal analysis
+
+These techniques are used to analyze nonlinear devices such as BJTs and diodes by replacing them with linear equivalents under suitable conditions. In small-signal analysis, the input signal is assumed to be very small compared to the DC bias level. The small AC signal is superimposed on the biasing DC voltage, and the transistor is analyzed around the Q-point. This allows us to study only a small portion of the exponential curve, which appears approximately linear.
+
+In the small-signal model of a BJT, we typically replace the transistor with a resistance r
+π
+	​
+
+ between base and emitter and a dependent current source of value g
+m
+	​
+
+v
+π
+	​
+
+. This linear approximation makes it easier to analyze amplifier circuits mathematically and understand how small input variations produce amplified output variations.
