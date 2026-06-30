@@ -2,7 +2,7 @@ Today I learned about PMOS because recently the lecture had been covering concep
 
 After that, we moved on to the concept of finding the input and output impedance of a PMOS. Basically, I don't think I need to explain the entire procedure because it is the same method that we followed for finding the input and output impedance of an NMOS. First, we set all the independent sources to zero. Then we apply a test voltage at the input or output, depending on what impedance we want to find. Finally, we calculate the impedance using (R = \frac{V}{I}).
 
-Then I learned about AC ground. Initially, I thought that ground and AC ground were the same thing, but later I realized that they are actually different concepts. An AC ground is a node where the AC or small-signal voltage does not change with time, even though the DC voltage at that node may not be zero. So, for AC signals, that node behaves like ground.
+Then I learned about AC ground. Initially, I thought that ground an d AC ground were the same thing, but later I realized that they are actually different concepts. An AC ground is a node where the AC or small-signal voltage does not change with time, even though the DC voltage at that node may not be zero. So, for AC signals, that node behaves like ground.
 
 Next, we studied the diode-connected MOSFET. In a diode-connected MOSFET, we simply short the gate and the drain together. Earlier I mistakenly said source and gate, but it is actually the drain and the gate that are connected. We also derived the equation for the input impedance of the diode-connected MOSFET.
 
